@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    /* لتجعله أكثر مرونة */
+    scroll-behavior: smooth;
+}
+
+header{
+
+    background-color: #f0f0f0;
+    width: 100%;
+   /* header  لأنه عندما النزول لتحت لا يتحرك ال يبقى ثابت */
+    position: fixed;
+    /* عشان يظله ظاهر ما حدا يغطي عليه */
+    z-index: 999;
+    display: flex;
+    /*  هو المسافة الجانبية بين اللوجو ع الشمال و الكلمات الثلاثة ع اليمين*/
+    justify-content: space-between;
+    /* لتسطير العناصر*/
+    align-items: center;
+    /*  لترك المسافات بين الكلمات و لتوسيط الكلمات */
+    padding: 10px 200px;
+
+}
+
+.logo{
+    /* يشيل الخط الي تحت الكلمة */
+    text-decoration: none;
+    /* يغير لون الكلمة */
+    color: #3a6cf4;
+    /* بيخلي جميع حروف الكلمة حروف كابيتال */
+    text-transform: uppercase;
+    /* لتضخيم الكلمة */
+    font-weight: 700;
+    /* لحجم الخط */
+    font-size: 1.8em;
+
+}
+
+.navigation a{
+    color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    /* التباعد بين الثلاث تباعد متناسق */
+    padding-left: 30px;
+
+}
+/* معناها عندما اضغط على الكلمة الموجودة باللينك */
+.navigation a:hover{
+    /* غيير اللون الى  */
+    color: #ae1cfc;  
+
+}
+
+section {
+    /* عشان ازيح الكلمات بحيث الهيدر ما يغطي عليها وتصبح ظاهرة */
+    padding: 60px 100px;
+
+}
+
+.main {
+    width: 100%;
+    /* vh عشان يغطي على الجزء كلو الي تحت الهيدر */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* كود لوضع صورة ونضع رابط الصورة في url */
+    background: url(c:Users/HP/Desktop/bak/cr.png) no-repeat;
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+   
+}
+.main h2{
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4e9eff;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.main h3 {
+    color: #fff;
+    font-size:2em;
+    font-weight: 700;
+    /* هو المسافات بين الحروف في كل جملة */
+    letter-spacing:1px ;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+
+.main-btn{
+    color: #fff;
+    background-color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight:600 ;
+    display: inline-block;
+    /* الأرقام هادي عشان يكون التصميم متلائم مع اللابتوب و التلفون و الايباد وغيرها */
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    /* لأنه يعطينا شكل زوايا المربع بشكل دائري */
+    border-radius: 15px;
+    margin-bottom: 40px;
+    /*  تحول المربع بشكل لطيف عندما يكبر ويصغر*/
+    transition: 0.7s ease;
+}
+/* يقوم بعمل عند الضغط على المربع يتغير لونه ويعطي تأثير جميل */
+.main-btn:hover{
+    background-color:#0a49f6 ;
+    transform:scale(1.1);
+
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.8em;
+    padding-right: 25px;
+
+}
+
+.title {
+    display: flex;
+    /* عشان الكلمة تصير بوسط الصفحة */
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    /* لجعل الكروت بجانب بعض */
+    flex-direction: row;
+    /* عشان الكروت لا تصغر اذا صغرنا المساحة وبالتالي تنزل الكروت الزيادة لتحت */
+    flex-wrap: wrap;
+
+}
+
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    /*   أول اشي بدك الظل تحت ولا فوق ثاني اشي الظل يمين موجب ولا شمال سالب ثالث غمق اللون أو حدته رابع اللون الرمادي*/
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);   
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+.card:hover{
+    transform:scale(1.1);
+    
+}
+
+.icon{
+    color: #3a6cf4;
+    font-size: 8em;
+    text-align: center;
+
+}
+
+.info{
+    text-align: center;
+}
+
+.info h3{
+    color: #3a6cf4;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 10px;
+
+}
+
+.projects{
+    background-color: #04047d;
+    
+}
+
+.projects .content{
+    margin-top: 30px;
+}
+
+.project-card{
+    background-color: #fff;
+    /* بيعمل سطور أو حدود للكارت */
+    border: 1px solid #fff;
+    min-height: 5em;
+    width: 18em;
+    
+    overflow: hidden;
+    border-radius: 7px;
+    margin: 18px;
+   
+}
+
+.project-card :hover{
+    transform: scale(1.1);
+    transition: 0.7s ease;
+}
+/*للزيادة من الشفافية عند الضغط على الصورة تزيد اضاءتها*/
+.project-card :hover .project-image{
+    opacity: 0.9;
+    
+    
+}
+
+.project-image img{
+    width:100%
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.project-category{
+    font-size: 1.3em;
+    color: #000;
+}
+
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 7 px;
+}
+.more-details{
+    text-decoration: none;
+    color: #3a6cf4;
+
+}
+
+.more-details:hover{
+    color: #da1cfc;
+}
+
+.contact .icon{
+    font-size:4em;
+}
+
+
+.contact .info .h3 {
+
+    color: #000;
+
+}
+
+.contact .info p{
+    font-size: 1.3em;
+}
+
+.footer{
+    background-color:#04047d ;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+.footer-title span{
+    color: #fdaf05;
+    font-size:1em;
+}
+
+/*نستخدمة عشان الموقع يظهر بشكل جميل ولائق على الجوال أو على أي جهاز صغير */
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+    .navigation a{
+        padding-left: 10px;
+    }
+    .title{
+        font-size: 1.6;
+    }
+    section{
+        padding: 60px 15px;
+    }
+    .main-content h2{
+        font-size: 0.8em;
+    }
+    .main-content h3{
+        font-size: 1.2em;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
+
+
+    
+
